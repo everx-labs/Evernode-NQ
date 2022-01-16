@@ -1,8 +1,10 @@
-The preferred way to configure the notification service by the user is to use DeBot wich performs two tasks:
+For end users, the preferred way to set up a subscriptions is to use Notification DeBot.
 
-- Allows you to specify your notification rules.
+Notification DeBot performs two tasks:
 
-- Informs notification provider where to deliver your messages 
+- It allows the user to specify notification rules.
+
+- It informs the Notification provider where to deliver encrypted messages.
 
 ## Step 1. Run DeBot
 
@@ -12,7 +14,9 @@ Debot address: 0:640cb57d316400dd9df639c1a898f267a71e2fa018ba0132ef01104eb3fa86f
 - Mainnet: [https://ton-surf-alpha.firebaseapp.com/debot?address=0%3A640cb57d316400dd9df639c1a898f267a71e2fa018ba0132ef01104eb3fa86fd](https://ton-surf-alpha.firebaseapp.com/debot?address=0%3A640cb57d316400dd9df639c1a898f267a71e2fa018ba0132ef01104eb3fa86fd&net=devnet)
 - Devnet: [https://ton-surf-alpha.firebaseapp.com/debot?address=0%3A640cb57d316400dd9df639c1a898f267a71e2fa018ba0132ef01104eb3fa86fd&net=devnet](https://ton-surf-alpha.firebaseapp.com/debot?address=0%3A640cb57d316400dd9df639c1a898f267a71e2fa018ba0132ef01104eb3fa86fd&net=devnet)
 
-DeBot checks if you have a notification contract, otherwise it will deploy it.  You must agree to sign the deployment transaction. In the figure below, DeBot has detected that the notification contract has already been deployed: 
+DeBot checks if you have a notification contract, otherwise it will deploy it. You must agree to sign the deployment transaction. 
+
+In the figure below, DeBot has detected that the notification contract has already been deployed: 
 
 ![Screenshot from 2022-01-12 16-52-15.png](pics/Screenshot_from_2022-01-12_16-52-15.png)
 
@@ -26,9 +30,7 @@ Select **"Send data to provider"**
 
 ![Screenshot from 2022-01-12 17-04-35.png](pics/Screenshot_from_2022-01-12_17-04-35.png)
 
-Enter the data required by the provider
-
-Lets assume you want to receive http notifications, so enter your site webhook url, and press Enter
+Enter the data required by the provider. Lets assume you want to receive http notifications, so enter your site webhook url, and press Enter
 
 ![Screenshot from 2021-09-13 17-02-53.png](pics/Screenshot_from_2021-09-13_17-02-53.png)
 
@@ -47,13 +49,13 @@ DeBot displays a hint on how to set the rules for selecting messages
 
 You should write your rules in a simple text format:
 
-`ID=<providerId>`,  where providerId appears in the "Show provider list" menu
+`ID=<providerId>`,  as it appears in the "Show provider list" menu.
 
 `<address> <msgType, msgType, ...>`, where msgType = extIn | extOut | internal | all
 
 To add the next line, use "Ctrl + Enter", or you may find it easier to write the rules in your preferred editor and just copy and paste them here.
 
-You can configure as many providers as you like, e.g:
+You can configure as many providers as you like:
 
 ```
 ID=PROVIDER1
