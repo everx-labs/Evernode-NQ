@@ -2,11 +2,10 @@
 
 This repository contains documents that describe the architecture of a solution for delivering 
 encrypted messages from the blockchain to end-users.
-The solution ensures that not only the “man-in-the-middle”, but also the Sender cannot decrypt 
-the message and match which smart contracts (for example, wallets) belong to 
-which recipient.
+The solution ensures that neither the sender nor the "man in the middle" can decrypt
+message or match which smart contracts (e.g. wallets) belong to which recipient.
 
-To achieve this goal, the process of creating-encrypting and delivering messages was separated,
+To achieve this goal, the process of creating/encrypting and delivering messages was separated,
  and the following entities were introduced:
  
 ### Queue Provider
