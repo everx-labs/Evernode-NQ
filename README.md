@@ -2,8 +2,8 @@
 
 This repository contains documents that describe the architecture of a solution for delivering 
 encrypted messages from the blockchain to end-users.
-The solution ensures that not only the “man-in-the-middle”, but also the Sender cannot find out
-the content of the message and match which smart contracts (for example, wallets) belong to 
+The solution ensures that not only the “man-in-the-middle”, but also the Sender cannot decrypt 
+the message and match which smart contracts (for example, wallets) belong to 
 which recipient.
 
 To achieve this goal, the process of creating-encrypting and delivering messages was separated,
