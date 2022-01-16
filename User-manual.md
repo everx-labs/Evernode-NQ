@@ -1,5 +1,3 @@
-The preferred way to configure the notification service by the user is to use debot.
-
 The preferred way to configure the notification service by the user is to use DeBot wich performs two tasks:
 
 - Allows you to specify your notification rules.

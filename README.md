@@ -31,4 +31,9 @@ User---> CONSTANT-HASH --->|      Queue      |
                             ENCRYPTED-MESSAGE
                            TO DELIVERY ADDRESS
  ```
-Note that the user sends the same **CONSTANT-HASH** to both the Queue Provider and the Notification Provider. Using this CONSTANT-HASH, Notification Provider understands where to send a particular encrypted message. 
+Note that the user sends the same **CONSTANT-HASH** to both the Queue Provider and the Notification Provider. Using this value, Notification Provider understands where to send a particular encrypted message. 
+
+### Next 
+
+ - [User Manual](User-manual.md)
+ - [Notification-provider-manual](Notification-provider-manual.md)
