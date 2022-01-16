@@ -14,7 +14,8 @@ Debot address: 0:640cb57d316400dd9df639c1a898f267a71e2fa018ba0132ef01104eb3fa86f
 - Mainnet: [https://ton-surf-alpha.firebaseapp.com/debot?address=0%3A640cb57d316400dd9df639c1a898f267a71e2fa018ba0132ef01104eb3fa86fd](https://ton-surf-alpha.firebaseapp.com/debot?address=0%3A640cb57d316400dd9df639c1a898f267a71e2fa018ba0132ef01104eb3fa86fd&net=devnet)
 - Devnet: [https://ton-surf-alpha.firebaseapp.com/debot?address=0%3A640cb57d316400dd9df639c1a898f267a71e2fa018ba0132ef01104eb3fa86fd&net=devnet](https://ton-surf-alpha.firebaseapp.com/debot?address=0%3A640cb57d316400dd9df639c1a898f267a71e2fa018ba0132ef01104eb3fa86fd&net=devnet)
 
-DeBot checks if you have a notification contract, otherwise it will deploy it. You must agree to sign the deployment transaction. 
+DeBot checks if you have a notification contract, otherwise it will deploy it.
+You must agree to sign the deployment transaction. 
 
 In the figure below, DeBot has detected that the notification contract has already been deployed: 
 
@@ -30,7 +31,8 @@ Select **"Send data to provider"**
 
 ![Screenshot from 2022-01-12 17-04-35.png](pics/Screenshot_from_2022-01-12_17-04-35.png)
 
-Enter the data required by the provider. Lets assume you want to receive http notifications, so enter your site webhook url, and press Enter
+Enter the data required by the provider. Lets assume you want to receive http notifications,
+so enter your site webhook url, and press Enter
 
 ![Screenshot from 2021-09-13 17-02-53.png](pics/Screenshot_from_2021-09-13_17-02-53.png)
 
@@ -53,7 +55,8 @@ You should write your rules in a simple text format:
 
 `<address> <msgType, msgType, ...>`, where msgType = extIn | extOut | internal | all
 
-To add the next line, use "Ctrl + Enter", or you may find it easier to write the rules in your preferred editor and just copy and paste them here.
+To add the next line, use "Ctrl + Enter", or you may find it easier to write the rules in your
+preferred editor and just copy and paste them here.
 
 You can configure as many providers as you like:
 
@@ -73,7 +76,8 @@ If you want to change the rules, just save new rules again.
 
 All information is encrypted, so DeBot asks you to “Sign it with Surf” every time you save it.
 
-If you've saved your rules, you're done! The specified provider will receive encrypted messages to be sent to you.
+If you've saved your rules, you're done! The specified provider will receive encrypted messages
+to be sent to you.
 
 ## Change rules or unsubscribe
 

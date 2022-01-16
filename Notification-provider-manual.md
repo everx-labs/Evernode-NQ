@@ -3,17 +3,21 @@
 Each notification provider must:
 
 - have a public https endpoint to receive data from the user
-- be registered in APNS / FCM service to send push notifications (optional, for PUSH notifications only) 
-- be able to deliver notifications within a specified time period (for example, 1-24 hours) with re-delivery in case of errors
+- be registered in APNS/FCM service to send push notifications
+  (optional, for PUSH notifications only) 
+- be able to deliver notifications within a specified time period (for example, 1-24 hours)
+  with re-delivery in case of errors
 
 ## 2. How to become a Notification provider 
- If your organisation wants to be a Notification provider [let us know](https://t.me/EkaterinaPantaz), and you'll get:
+ If your organisation wants to be a Notification provider
+ [let us know](https://t.me/EkaterinaPantaz), and you'll get:
 
 - FQDN of Kafka brokers to connect
 - the name of topic created for your organization
 - your credentials - username and password
 
-For each provider, a separate topic with two partitions and a message retention period of 8 hours is created.
+For each provider, a separate topic with two partitions and a message retention period of 8 hours
+is created.
 
 ##  3. Check your setup
 ### 3.1 Check your credentials
@@ -31,7 +35,8 @@ If you got access to your topic your set up is correct.
 
 ### 3.2 Subscribe to notifications on behalf of the user
 
-For testing act as a user and configure your notification rules, see: [“User's Manual”](./User-manual.md)
+For testing act as a user and configure your notification rules,
+see: [“User's Manual”](./User-manual.md)
 
 Make sure that your https endpoint has received POST from DeBot
 
@@ -45,7 +50,8 @@ Make sure that your https endpoint has received POST from DeBot
 
 ### 3.3 Read notifications from Kafka topic
 
-Use your preferred Kafka client and credentials to receive messages from Kafka, SASL SCRAM-SHA-512 mechanism without SSL encryption is used.
+Use your preferred Kafka client and credentials to receive messages from Kafka,
+SASL SCRAM-SHA-512 mechanism without SSL encryption is used.
 
 Each Kafka message has:
 
@@ -64,6 +70,8 @@ Each Kafka message has:
 
 ### A.1 Subscribe to notifications without DeBot,
 
-You can subscribe to notifications without DeBot, just using our SDK, but in this case there is no guarantee that the sender will not be able to match the recipient and their contracts.
+You can subscribe to notifications without DeBot, just using our SDK, but in this case there is
+no guarantee that the sender will not be able to match the recipient and their contracts.
 
-You can find a code example in [notification-contract-management](./notification-contract-management) directory
+You can find a code example in
+[notification-contract-management](./notification-contract-management) directory.
