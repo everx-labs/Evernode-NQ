@@ -20,12 +20,15 @@ User---> CONSTANT-HASH --->|      Queue      |
   |          RULES         |     Provider    |
   |                        +--------+--------+
   |                                 |
-  |                            CONSTANT-HASH
-  |                          ENCRYPTED-MESSAGE 
+  |                           CONSTANT-HASH
+  |                         ENCRYPTED-MESSAGE 
   |                                 | 
   |                        +-----------------+
   +---> CONSTANT-HASH ---->|   Notification  |  
-      DELIVERY-ADDRESS     |    Provider     |---> ENCRYPTED-MESSAGE TO DELIVERY ADDRESS
-                           +-----------------+    
+      DELIVERY-ADDRESS     |    Provider     |
+                           +-----------------+ 
+                                    |
+                            ENCRYPTED-MESSAGE
+                           TO DELIVERY ADDRESS
  ```
-Note that the user sends Queue Provider and Notification Provider data containing the same CONSTANT-HASH. Using this CONSTANT-HASH, Notification Provider understands where to send a particular encrypted message.
+Note that the user sends the same **CONSTANT-HASH** to both the Queue Provider and the Notification Provider. Using this CONSTANT-HASH, Notification Provider understands where to send a particular encrypted message. 
