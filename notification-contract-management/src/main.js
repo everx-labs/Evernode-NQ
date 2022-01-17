@@ -90,7 +90,7 @@ async function main(client) {
     }
 
     console.log('Save filter to contract')
-    await saveFilter(userInput)
+    await SafeEncryptedFilter(userInput)
 
     /*
      * There is a small chance that the state of the contract will eventually update,
@@ -114,7 +114,7 @@ async function main(client) {
     }
 
     console.log('Clear filters')
-    await saveFilter('')
+    await SafeEncryptedFilter('')
 
     return
 
@@ -130,7 +130,7 @@ async function main(client) {
         return { decryptedHash: str.substr(0, 64), decryptedText: str.substr(64) }
     }
 
-    async function saveFilter(text) {
+    async function SafeEncryptedFilter(text) {
         /*
          * To encrypt data with NaclBox we need to derive a special public key
          */
