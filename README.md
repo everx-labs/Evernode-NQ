@@ -44,5 +44,6 @@ message.
 
 ### Next reading
 
- - [User Manual](User-manual.md)
+ - [How to create a notification via debot](User-manual.md)
+ - [How to create a notification with client libraries](notification-contract-management/)
  - [Notification-provider-manual](Notification-provider-manual.md)
