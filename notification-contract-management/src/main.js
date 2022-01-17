@@ -137,10 +137,15 @@ async function main(client) {
         return { decryptedHash: str.substr(0, 64), decryptedText: str.substr(64) }
     }
 
+
     async function SafeEncryptedFilter(text) {
         /*
-         * All data stored in the notification contract is encrypted to ensure that no one
-         * can match which smart contracts (e.g. wallets) belong to which recipient.
+         * This is an important step when we encrypt subscription details with private 
+         * user key and public Evernode-NQ service key, so that it is not possible 
+         * to match the subscription details with user credentials
+        */
+        
+        /*
          * To encrypt data with NaclBox we need to derive a special public key
          */
         const pk = (
