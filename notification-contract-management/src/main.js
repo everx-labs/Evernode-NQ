@@ -26,13 +26,13 @@ const giverKeys = {
 
 /*
  * Example if user-defined notification rules. New lines matter.
+ * You can find provider IDs interactively with DeBot.
  */
 const userInput = `
     ID=devnull
     -1:0000000000000000000000000000000000000000000000000000000000000000 all
      0:e79073de464cd464abcd297fc21ecf91aa829eb71e2ffa9e3a18e66ba7c74ba9 extIn	  
-     0:1bdfca239afc999c8f99a9c1411af4bd229b4bece1506529d760f5fa1d7f4357 extIn, extOut
-     0:276ee759d71636ffef067c8fa018209f7eb3c9960a27a3c4ebdd73c39ef15fc5 internal	
+     0:1bdfca239afc999c8f99a9c1411af4bd229b4bece1506529d760f5fa1d7f4357 extIn, extOut, internal
 `
 
 ;(async () => {
