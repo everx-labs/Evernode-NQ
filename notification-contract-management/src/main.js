@@ -9,7 +9,11 @@ const GIVER_ABI = require('./contracts/giver.abi.json')
  */
 const SERVICE_PUBLIC_KEY = 'a36bf515ee8de6b79d30b294bbe7162f5e2a45b95ea97e4baebab8873492ee43'
 
-const SDK_ENDPOINT = 'https://net.ton.dev'
+const SDK_ENDPOINTS = [
+    'https://eri01.net.everos.dev',
+    'https://rbx01.net.everos.dev',
+    'https://gra01.net.everos.dev',
+]
 
 /*
  * Your GIVER address and keys
@@ -26,12 +30,15 @@ const giverKeys = {
 const userInput = `
     ID=devnull
     -1:0000000000000000000000000000000000000000000000000000000000000000 all
+     0:e79073de464cd464abcd297fc21ecf91aa829eb71e2ffa9e3a18e66ba7c74ba9 extIn	  
+     0:1bdfca239afc999c8f99a9c1411af4bd229b4bece1506529d760f5fa1d7f4357 extIn, extOut
+     0:276ee759d71636ffef067c8fa018209f7eb3c9960a27a3c4ebdd73c39ef15fc5 internal	
 `
 
 ;(async () => {
     try {
         TonClient.useBinaryLibrary(libNode)
-        const client = new TonClient({ network: { endpoints: [SDK_ENDPOINT] } })
+        const client = new TonClient({ network: { endpoints: SDK_ENDPOINTS } })
 
         // Create Giver's account
         const giverAccount = new Account(
@@ -132,6 +139,8 @@ async function main(client) {
 
     async function SafeEncryptedFilter(text) {
         /*
+         * All data stored in the notification contract is encrypted to ensure that no one
+         * can match which smart contracts (e.g. wallets) belong to which recipient.
          * To encrypt data with NaclBox we need to derive a special public key
          */
         const pk = (
