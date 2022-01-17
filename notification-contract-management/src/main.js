@@ -25,8 +25,8 @@ const giverKeys = {
 }
 
 /*
- * Example if user-defined notification rules. New lines matter.
- * You can find provider IDs interactively with DeBot.
+ * Example of user-defined notification rules. New lines matter.
+ * Provider IDs can be found interactively with DeBot.
  */
 const userInput = `
     ID=devnull
