@@ -1,0 +1,18 @@
+{
+    "name": "notification-contract-management",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "lint": "./node_modules/eslint/bin/eslint.js src/",
+        "run": "node src/main"
+    },
+    "dependencies": {
+        "@tonclient/appkit": "^0.3.0",
+        "@tonclient/core": "latest",
+        "@tonclient/lib-node": "latest",
+        "ramda": "^0.26.1"
+    },
+    "devDependencies": {
+        "eslint": "8.6.0"
+    }
+}
