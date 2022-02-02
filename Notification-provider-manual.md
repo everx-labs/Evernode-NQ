@@ -55,9 +55,12 @@ SASL SCRAM-SHA-512 mechanism without SSL encryption is used.
 
 Each Kafka message has:
 
-   - key: String. It's an idempotency key. Messages with the same keys MUST be deduplicated!
+   - key: type string, an idempotency key. 
 
-   - value: String in a form `<hash> <nonce> <encodedMessage>`
+     Messages with the same keys must be **deduplicated**.
+     It is highly recommended to have a deduplication window of at least **48 hours**.
+     
+   - value: type string, contains `<hash> <nonce> <encodedMessage>`
 
 
 ### 3.4 Send notifications
